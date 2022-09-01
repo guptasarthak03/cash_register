@@ -9,7 +9,7 @@ const noteListDOM = document.querySelectorAll('.currency-note');
 const currencyList = [2000, 500, 100, 50, 10, 5, 1];
 
 calculateButton.addEventListener('click', () => {
-  // value setup for first time and next time
+  // value setup for first time and reset for the reset next time
   const bill = Number(billInputDOM.value);
   const deposit = Number(depositInputDOM.value);
   let showResult = false;
@@ -66,7 +66,6 @@ const calculateChange = change => {
   }
 
   // show total amount in caption
-  console.log(tableCaptionDOM.innerText);
   tableCaptionDOM.innerText = `Change to be returned: ₹${change} `;
 
   // Calculate change in currency
@@ -78,6 +77,7 @@ const calculateChange = change => {
 
     // case where currency note is  &enspbigger than the change
     if (check == change) {
+      noteListDOM[i].innerText = '';
       continue;
     }
 
