@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="brand">
+          <p class="brand-title">Cash Register Manager</p>
+          <p class="brand-desc">
+            A tool to calculate the change to be returned in minimum possible
+            currency notes.
+          </p>
+        </div>
+        <div class="input-container">
+          <div class="input-fields">
+            <label for="bill-amount" class="title">Bill Amount :</label>
+            <input type="text" class="inputbox" id="bill-amount" />
+          </div>
+          <div class="input-fields">
+            <label for="cash-deposit" class="title">Cash Deposit :</label>
+            <input type="text" class="inputbox" id="cash-deposit" />
+          </div>
+          <button class="btn-calculate">Calculate</button>
+          <p class="error-msg" id="deposit-msg"></p>
+        </div>
+        <div class="output-container">
+          <table class="output-table">
+            <caption>
+              Change to be returned
+            </caption>
+            <tr>
+              <th>No of Notes</th>
+              <td class="currency-note"></td>
+              <td class="currency-note"></td>
+              <td class="currency-note"></td>
+              <td class="currency-note"></td>
+              <td class="currency-note"></td>
+              <td class="currency-note"></td>
+              <td class="currency-note"></td>
+            </tr>
+            <tr>
+              <th>Note</th>
+              <th>2000</th>
+              <th>500</td>
+              <th>100</td>
+              <th>50</td>
+              <th>10</td>
+              <th>05</td>
+              <th>01</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./index.js"></script>
+</html>
