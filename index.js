@@ -1,6 +1,6 @@
 const billInputDOM = document.querySelector('#bill-amount');
 const depositInputDOM = document.querySelector('#cash-deposit');
-const outputBoxDOM
+const outputBoxDOM = document.querySelector('.output-container');
 const calculateButton = document.querySelector('.btn-calculate');
 const errorMsgDOM = document.querySelector('.error-msg');
 const noteListDOM = document.querySelectorAll('.currency-note');
@@ -18,6 +18,7 @@ calculateButton.addEventListener('click', () => {
   if (isInputValidated) {
     const change = deposit - bill;
     calculateChange(change);
+    outputBoxDOM.style.display = 'block';
   }
 });
 

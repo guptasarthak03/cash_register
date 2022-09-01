@@ -69,12 +69,12 @@ main .input-fields .inputbox:focus-visible {
 }
 
 main .container .error-msg {
+  width: 85%;
+  margin: 20px auto;
   background-color: var(--light);
-  width: 75%;
   border-radius: 2px;
   border: 1px solid var(--primary);
   color: var(--primary);
-  margin: 10px auto;
   display: none;
 }
 
@@ -91,6 +91,7 @@ main .btn-calculate {
 }
 
 main .output-container {
+  display: none;
 }
 
 main table {
